@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANTS</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Change to flex-start */
+            min-height: 100vh; /* Use min-height instead of height */
+            margin: 0;
+            padding: 20px; /* Add some padding */
+            box-sizing: border-box; /* Include padding in height calculations */
+        }
+        img {
+            width: 30%;
+            height: auto; /* Use auto to maintain aspect ratio */
+        }
+        .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0; /* Add some margin for spacing */
+        }
+
+        iframe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 550px;
+            height: 400px;
+            border: 0;
+        }
+        h2 {
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        form {
+            margin-top: 3%;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        #content {
+            width: 80%;
+            overflow-y: auto; /* Enable scrolling if content overflows */
+            max-height: 80vh; /* Set max-height to allow scrolling */
+        }
+        .content {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #fff7ef;
+            border: 1px solid #f4e7d8;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+nav { 
+  background-color: #06402b;
+  text-align: left;
+  width: 100%;
+  position: fixed; /* Fixes the navigation bar to the top */
+  top: 0; /* Ensures it is at the very top */
+  left: 0; /* Ensures it spans the full width */
+  z-index: 1; /* Keeps it above other content */
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; /* Aligns the navigation items to the right */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover > a {
+  background-color: #012d03;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 160px; /* Increased for better usability */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* For icon */
+.fa-user {
+  font-size: 24px;
+  color: #ebe2e2;
+  position: absolute;
+  top: 12px; /* Adjust this for vertical alignment */
+  left: 30px; /* Adjust this for horizontal alignment */
+  z-index: 2; /* Ensures it's above the navigation items */
+}
+
+/* Optional: Adjust logo if necessary */
+.logo_img {
+  position: fixed;
+  top: 10px;
+  left: 75px;
+  width: 150px;
+  height: auto;
+  z-index: 2; /* Ensures logo is above nav */
+}
+
+body{
+    background-image: url(cover2.jpg);
+}
+
+</style>
+</head>
+<body>
+
+<a href="logIn.html"> <i class="fas fa-user"></i> </a>
+
+    <nav>
+       <ul>
+           <li><a href="index.html">HOME</a></li>
+           <li>
+             <a href="">COUNTRIES</a>
+             <ul class="dropdown-content">
+               <li><a href="PHILIPPINES.html">Philippines</a></li>
+               <li><a href="THAILAND.html">Thailand</a></li>
+               <li><a href="INDIA.html">India</a></li>
+               <li><a href="JAPAN.html">Japan</a></li>
+               <li><a href="CHINA.html">China</a></li>
+               <li><a href="ITALY.html">Italy</a></li>
+               <li><a href="FRANCE.html">France</a></li>
+               <li><a href="MEXICO.html">Mexico</a></li>
+               <li><a href="BRAZIL.html">Brazil</a></li>
+             </ul>
+           </li>
+           <li><a href="RESTAURANTS.html">RESTAURANTS</a></li>
+           <li><a href="ABOUT US.html">ABOUT US</a></li>
+       </ul>
+       </nav>
+
+  <div class="logo">
+    <img src="img/logo.png" class="logo_img">
+ </div>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </form>
+    <div id="content">
+        <!-- Your content divs remain unchanged -->
+        <div class="content">
+            <h2>Philippines</h2>
+            <div class="restaurants">
+                <h4>Antonio’s</h4>
+                    <p>Located in Tagaytay, Antonio’s is renowned for its fine dining experience, offering a blend of European and Filipino cuisine.<br> The restaurant is set in a beautiful garden, providing a serene and elegant atmosphere.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.6102190320153!2d120.89177987486278!3d14.100171886328996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd9d6997c51e9f%3A0x851e440bfada4cc9!2sAntonio&#39;s%20Restaurant!5e0!3m2!1sen!2sph!4v1728804265026!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Toyo Eatery</h4>
+                    <p>Situated in Manila, Toyo Eatery is celebrated for its modern take on traditional Filipino dishes.<br> Chef Jordy Navarra’s innovative approach has earned the restaurant numerous accolades, including a spot on Asia’s 50 Best Restaurants list.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.190563115836!2d121.0201589748712!3d14.531089785946968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c92fe56c392d%3A0x66a5471d8f8b76f!2sToyo%20Eatery!5e0!3m2!1sen!2sph!4v1728804229753!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Gallery by Chele</h4>
+                    <p>Also in Manila, Gallery by Chele offers a unique dining experience with its fusion of Filipino ingredients and global culinary techniques. <br>Chef Chele Gonzalez’s creative dishes highlight the rich flavors of the Philippines in a contemporary setting.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.702267913341!2d121.05356457487197!3d14.559010985922441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c948ac417ddd%3A0x288ae957e863e35a!2sGallery%20By%20Chele!5e0!3m2!1sen!2sph!4v1728804192498!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Thailand</h2>
+            <div class="restaurants">
+                <h4>Gaggan Anand</h4>
+                    <p>Located in Bangkok, Gaggan Anand’s restaurant is famous for its innovative and progressive Indian cuisine.<br> It has consistently ranked high on Asia’s 50 Best Restaurants list and offers a unique dining experience with a creative tasting menu.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.6308746077525!2d100.56501177485569!3d13.740783886649933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29fff71c7f98b%3A0x82c0f47139958e00!2sGaggan!5e0!3m2!1sen!2sph!4v1728804110379!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Sühring</h4>
+                    <p>Also in Bangkok, Sühring is known for its modern German cuisine.<br> Run by twin chefs Thomas and Mathias Sühring, the restaurant combines traditional German flavors with contemporary techniques, earning it two Michelin stars.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1260727043596!2d100.54291217485513!3d13.7108132866768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f475a72816b%3A0xc55b79df0b138b62!2zU8O8aHJpbmc!5e0!3m2!1sen!2sph!4v1728804072200!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Le Normandie</h4>
+                    <p>Situated at the Mandarin Oriental in Bangkok, Le Normandie offers exquisite French cuisine with stunning views of the Chao Phraya River.<br> It has been a culinary landmark in Bangkok for decades and holds two Michelin stars.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.9137723163585!2d100.51172997485533!3d13.72367008666523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298c4c9004417%3A0x7ceb85f5b612225e!2sLe%20Normandie!5e0!3m2!1sen!2sph!4v1728804012235!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>India</h2>
+            <div class="restaurants">
+                <h4>Indian Accent</h4>
+                    <p>Located in New Delhi, Indian Accent is renowned for its modern and inventive take on traditional Indian cuisine.<br> Chef Manish Mehrotra’s creative dishes have earned the restaurant numerous accolades, including a spot on Asia’s 50 Best Restaurants list.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7479828.2763984585!2d69.75715973074425!3d23.73810962300531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd309eebed77%3A0xfd133b52e7612c26!2sIndian%20Accent!5e0!3m2!1sen!2sph!4v1728803960464!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Karavalli</h4>
+                    <p>Situated in Bengaluru, Karavalli offers an authentic taste of South Indian coastal cuisine.<br> The restaurant is celebrated for its traditional recipes and use of fresh, local ingredients, making it a favorite among food enthusiasts.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.990687195458!2d77.60607857484133!3d12.972447287342986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167e46fb00e5%3A0x777b03419880fc1f!2sKaravalli!5e0!3m2!1sen!2sph!4v1728803915783!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Adaa at Falaknuma Palace</h4>
+                    <p>Located in Hyderabad, Adaa provides a royal dining experience with its exquisite Hyderabadi cuisine.<br> Set in the luxurious Falaknuma Palace, the restaurant offers a unique blend of history and culinary excellence.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.696813002309!2d78.46460857493331!3d17.330171583547234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbbd57ad961df1%3A0x534536a5ce96a529!2sAdaa!5e0!3m2!1sen!2sph!4v1728803858427!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Japan</h2>
+            <div class="restaurants">
+                <h4>Sukiyabashi Jiro</h4>
+                    <p>Located in Tokyo, Sukiyabashi Jiro is one of the most famous sushi restaurants in the world.<br> Run by master sushi chef Jiro Ono, it has earned three Michelin stars and is renowned for its exceptional sushi experience.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.1730659329974!2d139.76136287559137!3d35.672740372590034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be5bfbdbc55%3A0xea447f83d867065!2sSukiyabashi%20Jiro!5e0!3m2!1sen!2sph!4v1728803804659!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Narisawa</h4>
+                    <p>Also in Tokyo, Narisawa offers innovative French-Japanese fusion cuisine. <br>Chef Yoshihiro Narisawa’s restaurant has been consistently ranked among the best in Asia, known for its focus on sustainability and nature-inspired dishes.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.218477527192!2d139.71954117559125!3d35.671622072590324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c833415b0ad%3A0x78be2a9702e4db5c!2sNarisawa!5e0!3m2!1sen!2sph!4v1728803730030!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Kikunoi</h4>
+                    <p>Situated in Kyoto, Kikunoi is a traditional kaiseki restaurant that has been awarded three Michelin stars.<br> Chef Yoshihiro Murata’s meticulous attention to detail and use of seasonal ingredients make it a standout dining experience.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.2089041142617!2d135.77948127556!3d35.00147537281417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108dae5c55555%3A0xccfa94138b48eb51!2sKikunoi%20Honten!5e0!3m2!1sen!2sph!4v1728803682064!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Italy</h2>
+            <div class="restaurants">
+                <h4>Osteria Francescana</h4>
+                    <p>Located in Modena, Osteria Francescana is helmed by Chef Massimo Bottura.<br> This three-Michelin-star restaurant is renowned for its innovative and artistic approach to traditional Italian cuisine. It has been consistently ranked among the best restaurants in the world.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2838.661919196382!2d10.918997976057986!3d44.6448263710723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fef12d42cf17f%3A0x19607398f8f8e95d!2sOsteria%20Francescana!5e0!3m2!1sen!2sph!4v1728803639785!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Piazza Duomo</h4>
+                    <p>Situated in Alba, Piazza Duomo offers a unique dining experience with its creative and contemporary Italian dishes. <br>Chef Enrico Crippa’s restaurant has earned three Michelin stars and is celebrated for its use of local ingredients and avant-garde techniques.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903993.044900546!2d3.553373525000001!3d44.70061360000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d2b35d2e860f4b%3A0xafa26d7929f2cc5f!2sPiazza%20Duomo!5e0!3m2!1sen!2sph!4v1728803604340!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Le Calandre</h4>
+                    <p>Located in Rubano, near Padua, Le Calandre is a three-Michelin-star restaurant run by Chef Massimiliano Alajmo.<br> Known for its modern and refined Italian cuisine, Le Calandre offers an exceptional dining experience with a focus on innovation and quality.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.384856983035!2d11.807058776102414!3d45.42174277107328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ed9a24cbd0147%3A0xb936c0ff1d7d21a8!2sLe%20Calandr%D0%B5!5e0!3m2!1sen!2sph!4v1728803526878!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>France</h2>
+            <div class="restaurants">
+                <h4>L’Arpège</h4>
+                    <p>Located in Paris, L’Arpège is renowned for its vegetable-focused cuisine. <br>Chef Alain Passard’s innovative approach has earned the restaurant three Michelin stars. The dishes highlight the freshest produce from the restaurant’s own gardens.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.127064013046!2d2.314493276305544!3d48.85578737133178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6702a1700ea43%3A0xee64dc33b34d3fd9!2zQXJww6hnZQ!5e0!3m2!1sen!2sph!4v1728803193205!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Mirazur</h4>
+                    <p>Situated in Menton, Mirazur offers stunning views of the Mediterranean Sea.<br. Chef Mauro Colagreco’s restaurant has also earned three Michelin stars and is celebrated for its creative and seasonal dishes that blend French and Italian influences.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.3746414756197!2d7.525339776009688!3d43.78583857109616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdec097ad9c09b%3A0x970320ed1eeb6f98!2sRestaurant%20Mirazur!5e0!3m2!1sen!2sph!4v1728803140183!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Le Bernardin</h4>
+                    <p>In Paris, Le Bernardin is famous for its exquisite seafood dishes.<br> Chef Éric Ripert’s culinary expertise has earned the restaurant three Michelin stars, making it a must-visit for seafood lovers.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0274142501994!2d-73.98433072415453!3d40.761421771386146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25947ea10b457%3A0x6548e99cd73a1e6b!2sLe%20Bernardin!5e0!3m2!1sen!2sph!4v1728802936071!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Mexico</h2>
+            <div class="restaurants">
+                <h4>Pujol</h4>
+                    <p>Located in Mexico City, Pujol is helmed by Chef Enrique Olvera.<br> This restaurant is renowned for its modern take on traditional Mexican cuisine and has consistently been ranked among the best in the world. The tasting menu features innovative dishes that highlight the rich flavors of Mexico.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.537570337878!2d-99.1973881250132!3d19.43237628184701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8ab75b39d59%3A0xa1b937b5fe14fb16!2sPujol!5e0!3m2!1sen!2sph!4v1728802803272!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Quintonil</h4>
+                    <p>Also in Mexico City, Quintonil is led by Chef Jorge Vallejo. <br>Known for its focus on local ingredients and contemporary Mexican cuisine, Quintonil has earned a spot on the list of Latin America’s 50 Best Restaurants. The menu offers a creative and refined dining experience.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.573142385911!2d-99.19428642501319!3d19.430840781848165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201ff65042f6d%3A0xada8294307fc00c3!2sQuintonil!5e0!3m2!1sen!2sph!4v1728802754201!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Sud 777</h4>
+                    <p>Situated in Mexico City, Sud 777 is celebrated for its fusion of flavors and innovative dishes.<br> Chef Edgar Núñez’s restaurant combines traditional Mexican ingredients with modern culinary techniques, creating a unique and memorable dining experience.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.3864946032168!2d-99.21191772501646!3d19.309028081944064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdffc1aade3a35%3A0xc35c68c5d8e468f3!2sSud%20777!5e0!3m2!1sen!2sph!4v1728802674720!5m2!1sen!2sph"></iframe>
+                    </div>
+               </div>
+        </div>
+
+        <div class="content">
+            <h2>Brazil</h2>
+            <div class="restaurants">
+                <h4>D.O.M</h4>
+                    <p>Located in São Paulo, D.O.M. is helmed by Chef Alex Atala.<br> This restaurant is renowned for its innovative use of Brazilian ingredients and has earned two Michelin stars. It offers a unique dining experience that highlights the rich biodiversity of Brazil.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.059122949706!2d-46.670024924890825!3d-23.566319978796503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d6e56707fd%3A0x269955670d659e58!2sD.O.M.!5e0!3m2!1sen!2sph!4v1728800280127!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Maní</h4>
+                    <p>Also in São Paulo, Maní is led by Chef Helena Rizzo. <br>Known for its creative and contemporary Brazilian cuisine, Maní has received numerous accolades, including a spot on Latin America’s 50 Best Restaurants list. The dishes here blend Brazilian, Asian, and European influences.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7313.832477026682!2d-46.68923425825587!3d-23.571451615171167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce575aaccf6f9f%3A0x633ab78c6d0057f8!2zTWFuw60!5e0!3m2!1sen!2sph!4v1728802339376!5m2!1sen!2sph"></iframe>
+                    </div>
+                    <hr>
+                <h4>Oro</h4>
+                    <p>Situated in Rio de Janeiro, Oro is a two-Michelin-star restaurant run by Chef Felipe Bronze. <br>Oro is celebrated for its modern and experimental approach to Brazilian cuisine, offering a tasting menu that showcases the best of local ingredients and culinary techniques.</p>
+                    <div class="iframe-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0269055565855!2d-43.22735272490933!3d-22.98603807919936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd44d33272025%3A0xfe98c9ac3056ca27!2sOro!5e0!3m2!1sen!2sph!4v1728802442482!5m2!1sen!2sph"></iframe>
+                    </div>
+            </div>
+        </div>
+        <!-- Other content sections remain unchanged -->
+    </div> <!-- Closing the #content div -->
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let filter = this.value.toUpperCase();
+            let contentDiv = document.getElementById('content');
+            let contents = contentDiv.getElementsByClassName('content');
+
+            for (let i = 0; i < contents.length; i++) {
+                let txtValue = contents[i].textContent || contents[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    contents[i].style.display = "";
+                } else {
+                    contents[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

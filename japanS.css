@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* For navigation */
+nav {
+  background-color: #06402b;
+  text-align: left;
+  padding: -5px;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 68%;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover > a {
+  background-color: #012d03;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* For icon */
+.fa-user {
+  font-size: 24px; /* Adjust the size */
+  color: #ebe2e2; /* Change the color */
+  margin-right: 30px; /* Add some space to the right */
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  left: 2%;
+}
+
+.logo_img {
+  position: absolute;
+  top: 15px;
+  left: 75px;
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+body {
+  background-color: rgb(244, 243, 242);
+}
+
+h1 {
+  text-align: center;
+  text-decoration: wavy;
+  margin-top: 25px;
+}
+
+h2 {
+  margin-left: 2%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin-left: 4%;
+}
+
+.container1 li {
+  margin-left: 8%;
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.container iframe {
+  position: relative;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Contact</title>
+
+<style>
+body {
+    background-image: url(cover2.jpg);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin */
+    font-family: Arial, sans-serif;
+    background-color: #eedfcc;
+    color: #333;
+}
+
+.contact-section h2{
+    color: black;
+}
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+.team-member p {
+    color: white;
+}
+
+.about-section, .contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #eedfcc;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #e4e4d8;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #eee6dd;
+    border-radius: 4px;
+    background-color: #eee6dd;
+}
+
+.contact-section input[type="submit"] {
+    background-color: #04AA6D;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-section input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+nav { 
+  background-color: #06402b;
+  text-align: left;
+  width: 100%;
+  position: fixed; /* Fixes the navigation bar to the top */
+  top: 0; /* Ensures it is at the very top */
+  left: 0; /* Ensures it spans the full width */
+  z-index: 1; /* Keeps it above other content */
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; /* Aligns the navigation items to the right */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover > a {
+  background-color: #012d03;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 160px; /* Increased for better usability */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* For icon */
+.fa-user {
+  font-size: 24px;
+  color: #ebe2e2;
+  position: absolute;
+  top: 12px; /* Adjust this for vertical alignment */
+  left: 30px; /* Adjust this for horizontal alignment */
+  z-index: 2; /* Ensures it's above the navigation items */
+}
+
+/* Optional: Adjust logo if necessary */
+.logo_img {
+  position: fixed;
+  top: 10px;
+  left: 75px;
+  width: 150px;
+  height: auto;
+  z-index: 2; /* Ensures logo is above nav */
+}
+
+</style>
+
+</head>
+<body>
+
+    <a href="logIn.html"> <i class="fas fa-user"></i> </a>
+
+    <nav>
+       <ul>
+           <li><a href="index.html">HOME</a></li>
+           <li>
+             <a href="">COUNTRIES</a>
+             <ul class="dropdown-content">
+               <li><a href="PHILIPPINES.html">Philippines</a></li>
+               <li><a href="THAILAND.html">Thailand</a></li>
+               <li><a href="INDIA.html">India</a></li>
+               <li><a href="JAPAN.html">Japan</a></li>
+               <li><a href="CHINA.html">China</a></li>
+               <li><a href="ITALY.html">Italy</a></li>
+               <li><a href="FRANCE.html">France</a></li>
+               <li><a href="MEXICO.html">Mexico</a></li>
+               <li><a href="BRAZIL.html">Brazil</a></li>
+             </ul>
+           </li>
+           <li><a href="RESTAURANTS.html">RESTAURANTS</a></li>
+           <li><a href="ABOUT US.html">ABOUT US</a></li>
+       </ul>
+       </nav>
+
+  <div class="logo">
+    <img src="img/logo.png" class="logo_img">
+ </div>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Organized and detailed-oriented student currently pursuing a Bachelor’s degree in Entertainment and Multimedia Computing major in Digital Animation Technology.
+          With a passionate will to pursue the future of the film and entertainment industry as well as the production and writing. 
+          Furthermore, I am adept at problem-solving and open to collaborations for efficiency and accuracy of work.
+          I am seeking to expand my knowledge and have a deep understanding of other areas that may come as my expertise such as web/software development.</p>
+    </div>
+    <div class="team-section">
+        <h2>Creator</h2>
+        <div class="team-member">
+            <img src="img/thea.jpg" alt="Team Member">
+            <h3>Althea Jade R. Kasilag</h3>
+            <p>BSEMC-DAT 2A</p>
+        </div>
+    </div>
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="/submit_form" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email..">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
