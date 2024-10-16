@@ -378,19 +378,20 @@ body{
 
     <script>
         document.getElementById('searchInput').addEventListener('keyup', function() {
-            let filter = this.value.toUpperCase();
-            let contentDiv = document.getElementById('content');
-            let contents = contentDiv.getElementsByClassName('content');
+    let filter = this.value.toUpperCase().trim();
+    let contentDiv = document.getElementById('content');
+    let contents = contentDiv.getElementsByClassName('content');
 
-            for (let i = 0; i < contents.length; i++) {
-                let txtValue = contents[i].textContent || contents[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    contents[i].style.display = "";
-                } else {
-                    contents[i].style.display = "none";
-                }
-            }
-        });
+    for (let i = 0; i < contents.length; i++) {
+        let txtValue = contents[i].textContent || contents[i].innerText;
+        let regex = new RegExp('\\b' + filter + '\\b', 'i');
+        if (regex.test(txtValue)) {
+            contents[i].style.display = "";
+        } else {
+            contents[i].style.display = "none";
+        }
+    }
+});
     </script>
 </body>
 </html>
